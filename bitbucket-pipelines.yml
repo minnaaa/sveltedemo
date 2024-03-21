@@ -34,7 +34,7 @@ pipelines:
     - step:
         name: 'Clone and Sync with GitHub'
         script:
-          - git clone https://bitbucket.org/minnaaa/sveltedemo.git
+          - git clone https://bitbucket.org/sonmina0116/sveltedemo2.git
           - cd sveltedemo
           - git remote add github https://github.com/minnaaa/sveltedemo.git
           - git pull github master --allow-unrelated-histories -q
