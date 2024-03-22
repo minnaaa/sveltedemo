@@ -23,4 +23,4 @@ pipelines:
         script:
           - git config --global user.name "sonmina"
           - git config --global user.email "sonmina0115@gmail.com"
-          - git push github HEAD:main
+          - git push github main
