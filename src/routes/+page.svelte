@@ -18,7 +18,7 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app 안녕
+		to your new<br />SvelteKit app 안녕하세여
 	</h1>
 
 	<h2>
