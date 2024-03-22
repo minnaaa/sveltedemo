@@ -34,11 +34,13 @@ pipelines:
     - step:
         name: 'Clone and Sync with GitHub'
         script:
-          - git clone https://bitbucket.org/sonmina0116/sveltedemo2.git
-          - cd sveltedemo2
-          - git remote add github https://github.com/minnaaa/sveltedemo.git
+          # SSH 방식으로 변경된 GitHub 저장소 URL
+          - git clone git@github.com:minnaaa/sveltedemo.git
+          - cd sveltedemo
+          # Bitbucket에서 생성한 SSH 키를 GitHub에 등록했는지 확인
+          # git remote add 및 git pull/push 명령어는 SSH URL을 사용할 때 변경할 필요가 없지만, 저장소 URL이 SSH 형식으로 바뀌어야 함
           - git config --global pull.rebase false
           - git config user.name "sonmina"
           - git config user.email "sonmina0115@gmail.com"
-          - git pull github main --allow-unrelated-histories  
-          - git push github main
+          - git pull origin main --allow-unrelated-histories
+          - git push origin main
