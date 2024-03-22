@@ -21,6 +21,7 @@ pipelines:
     - step:
         name: 'Clone and Sync with GitHub'
         script:
-          - git config --global user.name "sonmina"
-          - git config --global user.email "sonmina0115@gmail.com"
+          - git config --global pull.rebase false 
+          - git config user.name "sonmina" 
+          - git config user.email "sonmina0115@gmail.com" 
           - git push github main
