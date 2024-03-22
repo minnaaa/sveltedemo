@@ -36,7 +36,7 @@ pipelines:
         script:
           - git clone https://bitbucket.org/sonmina0116/sveltedemo2.git
           - cd sveltedemo2
-          - git remote add origin git@github.com:minnaaa/sveltedemo.git
+          - git remote add github https://github.com/minnaaa/sveltedemo.git
           - git config --global pull.rebase false
           - git config user.name "손민아"
           - git config user.email "sonmina0115@gmail.com"
