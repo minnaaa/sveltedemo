@@ -7,19 +7,6 @@ image: atlassian/default-image:3
 
 pipelines:
   default:
-    - parallel:
-        - step:
-            name: 'Build and Test'
-            script:
-              - echo "Your build and test goes here..."
-        - step:
-            name: 'Lint'
-            script:
-              - echo "Your linting goes here..."
-        - step:
-            name: 'Security scan'
-            script:
-              - echo "Your security scan goes here..."
     - step:
         name: 'Deployment to Staging'
         deployment: staging
@@ -34,7 +21,7 @@ pipelines:
     - step:
         name: 'Clone and Sync with GitHub'
         script:
-          # SSH 방식으로 변경된 GitHub 저장소 URL
+          # SSH 방식으로 변경된 GitHub 저장소
           - git clone git@github.com:minnaaa/sveltedemo.git
           - cd sveltedemo
           # Bitbucket에서 생성한 SSH 키를 GitHub에 등록했는지 확인
