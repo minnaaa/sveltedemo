@@ -37,5 +37,6 @@ pipelines:
           - git clone https://bitbucket.org/sonmina0116/sveltedemo2.git
           - cd sveltedemo2
           - git remote add github https://github.com/minnaaa/sveltedemo.git
+          - git config --global pull.rebase false
           - git pull github main 
           - git push github main
