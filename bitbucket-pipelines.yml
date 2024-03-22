@@ -21,7 +21,7 @@ pipelines:
     - step:
         name: 'Deploy to Cloudflare Pages'
         script:
-          - zip -r build.zip \Users\user\test3 
+          - zip -r build.zip "C:\Users\user\test3" 
           - apt-get update && apt-get install -y curl
           - |
             curl --request POST \
