@@ -38,5 +38,7 @@ pipelines:
           - cd sveltedemo2
           - git remote add github https://github.com/minnaaa/sveltedemo.git
           - git config --global pull.rebase false
+          - git config user.name "손민아"
+          - git config user.email "sonmina0115@gmail.com"
           - git pull github main --allow-unrelated-histories  
           - git push github main
