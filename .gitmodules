@@ -1,0 +1,3 @@
+[submodule "sveltedemo"]
+	path = sveltedemo
+	url = https://github.com/minnaaa/sveltedemo.git
