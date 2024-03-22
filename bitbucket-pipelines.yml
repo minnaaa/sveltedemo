@@ -21,13 +21,14 @@ pipelines:
     - step:
         name: 'Deploy to Cloudflare Pages'
         script:
+          - zip -r build.zip C:\Users\user\test3 
           - apt-get update && apt-get install -y curl
           - |
             curl --request POST \
             --url "https://api.cloudflare.com/client/v4/accounts/b5bca0c03c2724360edfe745838ad046/pages/projects/sveltedemo/deployments" \
             --header "Authorization: Bearer bj0oRyZ9i0_Vf0qM_MUoNFvdMLAPxHN-ecdt9Nfx" \
             --header 'Content-Type: multipart/form-data' \
-            --form 'files=@path/to/your/build/directory' \
+            --form 'files=@path/to/build.zip'
             --form 'branch=your-branch-name-here'
     - step:
         name: 'Sync with GitHub'
